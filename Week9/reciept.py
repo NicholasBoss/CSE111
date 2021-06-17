@@ -8,11 +8,7 @@ def main():
     #prints each product on a separate line.
     print("Products:")
     for i in products:
-        product = products[i]
-        product_no = product[0]
-        product_name = product[1]
-        product_price = product[2]
-        print(f"{product_no} ['{product_name}', '{product_price}']")
+        
     print()
     # Selects and prints each requested item
     request = process_request("Week9/request.csv", PRODUCT_NUMBER_INDEX, products)
@@ -32,7 +28,7 @@ def read_dict(filename, key_column_index):
 
             key = row[key_column_index]
 
-            dictionary[key] = row
+            dictionary[key] = [row[PRODUCT_NAME_INDEX], row[PRODUCT_PRICE_INDEX]]
     #returns the full dictionary
     return dictionary
     
