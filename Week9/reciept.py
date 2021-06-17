@@ -1,22 +1,25 @@
 import csv
+#indexes for products
+PRODUCT_NUMBER_INDEX = 0
+PRODUCT_NAME_INDEX = 1
+PRODUCT_PRICE_INDEX = 2
 
 def main():
-    #indexes for products
-    PRODUCT_NUMBER_INDEX = 0
     
     products = read_dict("Week9/products.csv", PRODUCT_NUMBER_INDEX)
     #prints each product on a separate line.
     print("Products:")
     for i in products:
+        product = products[i]
         
+        print(f"{i} {product}")
     print()
     # Selects and prints each requested item
     request = process_request("Week9/request.csv", PRODUCT_NUMBER_INDEX, products)
 
 def read_dict(filename, key_column_index):
     #Creates an empty dictionary
-    PRODUCT_NAME_INDEX = 1
-    PRODUCT_PRICE_INDEX = 2
+    
     dictionary = {}
     #Opens the products.csv file and iterates through each row adding it to the dictionary
     with open(filename, "rt") as csv_file:
@@ -53,8 +56,8 @@ def process_request(filename, key_column_index, products):
             product_no = dictionary[i]
 
             product_info = products[product_no[0]]
-            product_name = product_info[1]
-            product_price = product_info[2]
+            product_name = product_info[0]
+            product_price = product_info[1]
             quantity = product_no[1]
         
             print(f"{product_name}: {quantity} @ {product_price} each.")
