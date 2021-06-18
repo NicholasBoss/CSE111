@@ -18,33 +18,15 @@ with open("Week9/TeamActivity/students.csv", "rt") as csv_file:
 
 i_number = input("Please enter an I-Number (xxxxxxxxx): ")
 
-# for i in i_number:
-#     if i == '-':
-#         i_number_new = re.sub("-","",i_number)
+for i in i_number:
+    if i == '-':
+        i_number= i_number.replace("-","")
         
-#     # else: 
-#     #     i_number_new = i_number
-
-
-# print(i_number_new)
-
-# i_number.replace("-", "")
-
-# i_list = list(i_number)
-# for i in i_list:
-#     if i == "-":
-#         i_list.remove(i)
-# i_number = ""
-# for i in i_list:
-#     i_number += i
-# print(i_number)
-
-
-# if i_number in dictionary:
-#     name = dictionary[i_number]
-#     print(name)
-# else:
-#     print("No such student.")
+if i_number in dictionary:
+    name = dictionary[i_number]
+    print(name)
+else:
+    print("No such student.")
     
-# print(dictionary)
+
 
