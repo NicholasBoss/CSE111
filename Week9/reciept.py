@@ -61,10 +61,5 @@ def process_request(filename, key_column_index, products):
             quantity = product_no[1]
         
             print(f"{product_name}: {quantity} @ {product_price} each.")
-
-
-        
-        
-    
-    
+ 
 main()
