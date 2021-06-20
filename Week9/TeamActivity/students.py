@@ -20,7 +20,7 @@ i_number = input("Please enter an I-Number (xxxxxxxxx): ")
 
 for i in i_number:
     if i == '-':
-        i_number= i_number.replace("-","")
+        i_number = i_number.replace("-","")
         
 if i_number in dictionary:
     name = dictionary[i_number]
