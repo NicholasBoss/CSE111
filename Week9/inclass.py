@@ -1,8 +1,8 @@
-import pandas as pd
+# import pandas as pd
 
-dataframe = pd.read_csv("Week9/products.csv")
+# dataframe = pd.read_csv("Week9/products.csv")
 
-column = dataframe["Name"]
+# column = dataframe["Name"]
 
-print(column)
-print(dataframe)
+# print(column)
+# print(dataframe)
