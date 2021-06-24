@@ -78,12 +78,12 @@ def process_request(filename, key_column_index, products):
                     sales_tax = subtotal_price * 0.06
                     total_price = subtotal_price + sales_tax
                 
-                    print(f"{product_name}: {quantity} @ {product_price} each.")
+                    print(f"{product_name}: {quantity} @ ${product_price} each.")
                 print()
                 print(f"Number of items: {total_items}")
-                print(f"Subtotal: {subtotal_price}")
-                print(f"Sales Tax: {sales_tax:.2f}")
-                print(f"Total: {total_price:.2f}")
+                print(f"Subtotal: ${subtotal_price}")
+                print(f"Sales Tax: ${sales_tax:.2f}")
+                print(f"Total: ${total_price:.2f}")
                 print()
                 print("Thank you for shopping at Inkom Emporium!")
                 print(f"{current_date_and_time:%A %I:%M %p %Y}")
