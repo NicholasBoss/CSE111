@@ -9,10 +9,11 @@ PRODUCT_PRICE_INDEX = 2
 def main():
     while True:
         try:
-            products = read_dict("Week9/products.csv", PRODUCT_NUMBER_INDEX)
+            products = getfilename("Please enter the name of the file: ")
+            products = read_dict("products.csv", PRODUCT_NUMBER_INDEX)
             print("Inkom Emporium\n")
             # Selects and prints each requested item
-            request = process_request("Week9/request.csv", PRODUCT_NUMBER_INDEX, products)
+            request = process_request("request.csv", PRODUCT_NUMBER_INDEX, products)
             break
         except FileNotFoundError:
             print("File does not exist. Please find the correct file.")
@@ -20,6 +21,17 @@ def main():
         except PermissionError:
             print("You do not have permission to view this file.")
             break
+
+def getfilename(msg):
+    while True:
+        try:
+            filename = input(msg)
+            if filename == "products.csv":
+                return filename
+            else:
+                print("File not found. Please enter a valid file.")
+        except FileNotFoundError as fnotfound:
+            print(f"Error: {fnotfound}")
 
 def read_dict(filename, key_column_index):
     #Creates an empty dictionary
