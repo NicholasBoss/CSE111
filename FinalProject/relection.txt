@@ -1,0 +1,39 @@
+Please take a few minutes to reflect on your experience in CSE 111 and
+think about the challenges, successes, and all that you've learned
+along the way.
+
+
+Now, please respond thoroughly (1 - 2 paragraphs for each question) to
+the following questions.
+
+1. Describe an experience you had this semester where you saw the power of
+functions.
+
+One experience I had this semester where I saw the power of functions was when we were writing the sentences program.
+I was very happy to find out that you could call functions as many times as you needed without having to rewrite the code
+time and time again. When I saw that I could tell a function to run multiple times, I was impressed by the usefullness of 
+that functionality.
+
+2. In your judgment, what is the value of test functions?
+
+The value of a test function is great. It allows the programmer to find errors in their code and to figure out where
+it is failing to do what they want. By testing each function they have made, any programmer can assure their employers
+that their program works without issue. By not testing, programs that are pushed out for public use, could become a problem 
+for whomever is using it. For example, there was a programmer whom prided on his work too much. This programmer did not test his 
+program and gave it to some of his employers. When the employers tried to use it, the program caused a failure in the equipment the
+employers were using. By using test functions, we can work to prevent the failure of important programs that are used by people alla
+around the world.
+
+3. Describe your process for troubleshooting and fixing a program that
+has a problem. What is one thing you can do to improve your process?
+
+My process for troubleshooting begins with finding an error in my code.
+This error can range from a function not working to a misplaced comma.
+First, I run the program again to find where it is failing at. 
+Second, I look at the code which is not being executed and work out what that code does.
+Third, I change the code to a solution that I think may work and I run the program again.
+Fourth, I go through the first three steps again until the program can run all the way through
+without a problem.
+Something I can do to improve my process, is to write test functions and to separate out the 
+tasks my program needs to accomplish into functions. I can then use my test functions to 
+check and see if the desired output of the function is achieved. 

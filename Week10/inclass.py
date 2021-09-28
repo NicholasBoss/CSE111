@@ -45,7 +45,7 @@ def loopForCircles(numberOfCircles):
     while True:
         try:
             for _ in range(numberOfCircles):
-                ## get raduis for each circle
+                ## get radius for each circle
                 r = integerInput("Please enter the radius: ")
                 circleAreas.append(computeCircleArea(r))
             break
