@@ -224,10 +224,10 @@ def compute_molar_mass(symbol_quantity_list, periodic_table):
     #   Add the product into the total mass.
     product = 0
     for i in symbol_quantity_list:
-        symbol = i[0]
-        quantity = i[1]
+        symbol = i[NAME_INDEX]
+        quantity = i[ATOMIC_MASS_INDEX]
         symbol_list = periodic_table[symbol]
-        atomic_mass = symbol_list[1]
+        atomic_mass = symbol_list[ATOMIC_MASS_INDEX]
         product += atomic_mass * quantity
     
     return product

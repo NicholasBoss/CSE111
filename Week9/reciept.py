@@ -58,32 +58,22 @@ def read_dict(filename, key_column_index):
 def process_request(filename, key_column_index, products):
     while True:
         try:
-            #Creates an empty dictionary
-            dictionary = {}
             #Opens the request.csv file and adds it to the dictionary
             with open(filename, "rt") as csv_file:
 
                 reader = csv.reader(csv_file)
 
                 next(reader)
-
+                total_items = 0
+                subtotal_price = 0
                 for row in reader:
                     
                     key = row[key_column_index]
 
-                    dictionary[key] = row
-                #Prints the requested items if they match the products in the products dictionary
-                #defining terms for calculation and date
-                total_items = 0
-                subtotal_price = 0
-                current_date_and_time = datetime.now()
-                for i in dictionary:
-                    product_no = dictionary[i]
-
-                    product_info = products[product_no[0]]
+                    product_info = products[key]
                     product_name = product_info[0]
                     product_price = product_info[1]
-                    quantity = product_no[1]
+                    quantity = row[1]
 
                     total_items += int(quantity)
                     subtotal_price += float(product_price) * int(quantity)
@@ -91,9 +81,15 @@ def process_request(filename, key_column_index, products):
                     total_price = subtotal_price + sales_tax
                 
                     print(f"{product_name}: {quantity} @ ${product_price} each.")
+                #Prints the requested items if they match the products in the products dictionary
+                #defining terms for calculation and date
+                
+                current_date_and_time = datetime.now()
+
+                    
                 print()
                 print(f"Number of items: {total_items}")
-                print(f"Subtotal: ${subtotal_price}")
+                print(f"Subtotal: ${subtotal_price:.2f}")
                 print(f"Sales Tax: ${sales_tax:.2f}")
                 print(f"Total: ${total_price:.2f}")
                 print()
