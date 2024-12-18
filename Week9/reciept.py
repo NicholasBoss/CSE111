@@ -94,10 +94,10 @@ def process_request(filename, key_column_index, products):
                 print(f"Total: ${total_price:.2f}")
                 print()
                 print("Thank you for shopping at Inkom Emporium!")
-                print(f"{current_date_and_time:%A %I:%M %p %Y}")
+                print(f"{current_date_and_time:%A %b %d %I:%M %p %Y}")
                 break
         except KeyError:
             print("Dictionary does not exist.")
             break
- 
+
 main()
